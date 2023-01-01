@@ -12,6 +12,7 @@ public class Main {
             System.out.println("Enter the name of candidate " + (i + 1) + ": ");
             candidates[i] = scanner.nextLine();
         }
+
         System.out.println("Enter the number of voters: ");
         int numberOfVoters = scanner.nextInt();
         scanner.nextLine();
@@ -25,15 +26,18 @@ public class Main {
                 }
             }
         }
+
         System.out.println("The election is over!");
         System.out.println("The candidates are: ");
-        for (int i = 0; i < candidates.length; i++) {
-            System.out.println(candidates[i]);
+        for (String candidate : candidates) {
+            System.out.println(candidate);
         }
+
         System.out.println("The number of votes each candidate got is: ");
         for (int i = 0; i < votes.length; i++) {
             System.out.println(candidates[i] + " got " + votes[i] + " votes.");
         }
+
         int maxVotes = votes[0];
         int maxVotesIndex = 0;
         for (int i = 1; i < votes.length; i++) {
